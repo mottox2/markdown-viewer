@@ -21,9 +21,10 @@ class App extends Component {
       breaks: true,
     })
     return <div>
-      <p styleName='hoge'>This is React Component</p>
-      <textarea styleName='textarea' value={this.state.value} onChange={(e) => this.onChange(e.target.value)}/>
-      <div dangerouslySetInnerHTML={{__html: html}}/>
+      <div styleName='container'>
+        <textarea styleName='textarea' value={this.state.value} onChange={(e) => this.onChange(e.target.value)}/>
+        <div dangerouslySetInnerHTML={{__html: html}}/>
+      </div>
       <div>{html}</div>
     </div>
   }
